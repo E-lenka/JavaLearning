@@ -149,7 +149,7 @@ public class Main {
         }*/
         //switch case
         // Выдает количество дней в месяце
-        System.out.println("Введите номер месяца: ");
+ /*       System.out.println("Введите номер месяца: ");
         Scanner in = new Scanner(System.in); //Создаем сканер
         switch (in.nextInt()){
             case 1:
@@ -191,12 +191,92 @@ public class Main {
                 break;
             default:
                 System.out.println("Неверно задан номер месяца");
+        }*/
+//Blocks
+        //Блоки видимости - где доступны переменные
+/*        {
+            int inf =10;
+
+            if (inf>0) {
+                int price = 4;
+                price += inf * price/100;
+                System.out.println(price);
+            }
+        //    System.out.println(price); //ошибка, так как price здесь не оперделена
+        }*/
+        //Наличие цифры 3 в двузначном числе
+/*        {
+            Scanner in = new Scanner(System.in);
+            int x1, x2;
+            x1 = in.nextInt();
+            x2 = x1 %10;
+            x1 = x1/10;
+
+            if(x2 == 3 || x1 == 3) {
+                System.out.println("В числе присутствует цифра 3");
+
+        } else {
+            System.out.println("В числе отсутствует цифра 3");
         }
 
+        }*/
+
+//while
+        /*{
+         *    while (условие){
+         *    действие и выполнение;
+         *    }
+         * }
+         * */
+// Пример while выводим значение х, пока число меньше 5
+/*        {
+            int x = 0;
+            while (x < 5) {
+                System.out.print(x + " ");
+                x++;
+            }
+
+        }*/
+        // do while
+/*        {
+            int x = 0;
+            do {
+                System.out.print(x + " ");
+                x++;
+            } while (x < 5);
+
+        }*/
+// Задача "автобус и мосты" - проедет ли автобус под мостом, высота автобуса 437 см
+        // Bus height 437 cm
+        // 1 754 => No crash
+        // 2 моста 300 и 800 => Crash 1
+        // проехали все моствы => No Crash
+        // N - количество мостов
+        {
+            System.out.println("Введите количество мостов и высоту каждого моста по порядку: ");
+            Scanner in = new Scanner(System.in);
+            int t = 0;
+            int i = 1;
+            int N = in.nextInt();
+
+            while (i<=N){
+                t = in.nextInt();
+                if (t < 437){
+                    System.out.println("Crash " + i);
+                    break;
+                }
+                i++;
+            }
+            if (t > 437){
+                System.out.println("No crash");
+            }
+        }
+
+
+
+
     }
-
 }
-
 
 
 
